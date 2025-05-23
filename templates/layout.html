@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {% block title%}
+        Ajjitech 
+      {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'potfolio.css' %}">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel='stylesheet'>
+    {% comment %} <script type="text/javascript"
+        src="{% static 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js' %}">
+    </script> {% endcomment %}
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "bYN1RmuqNAtaqF7Z1",
+        });
+    })();
+    </script>
+</head>
+<body>
+
+  <header class="header">
+        <a href="/" class="logo"> Asorire <span>Quzeem</span></a>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="/#home" class="active"> Home</a>
+            <!-- <a href="#education"> Education</a> --> 
+            <a href="/#testimonial">Testimonials</a>
+            <a href="/#contact"> Contact </a>
+            <a href="/service">Service</a>
+            
+        </nav>
+  </header>
+  {% block content %}
+
+  {% endblock %}
+
+
+   <footer class="footer">
+        <div class="social">
+            <a href="https://www.instagram.com/ajibolaasorire/?utm_source=qr&r=nametag"><i class='bx bxl-instagram-alt'></i></a>
+            <a href="https://wa.me/2349021325331?text= Hi, I need your Service"><i class='bx bxl-whatsapp'></i></a>
+            <a href="https://x.com/JAsorire?t=sD3hH679_y2eLbQ6L1lHXg&s=09"><i class='bx bxl-twitter'></i></a>
+            <a href="https://www.tiktok.com/@ajjitech?_t=ZM-8waoAMlSKTI&_r=1"><i class='bx bxl-tiktok'></i></a>
+        </div>
+        <ul class="list">
+
+            <li>
+                <a href="/#home">Home</a>
+            </li>
+            <li>
+                <a href="/#testimonial">Testimonial</a>
+            </li>
+            <li>
+                <a href="/#contact">Contact</a>
+            </li>
+            <li>
+                <a href="/service">Service</a>
+            </li>
+        </ul>
+        <p class="copyright">
+            Asorire Q. Ajibola | All Right Reserved
+        </p>
+
+        <a href="#" id="back-to-top">^</a>
+
+
+    </footer>
+
+    <script src="{% static 'potfolio.js' %}"></script>
+</body>
+</html>

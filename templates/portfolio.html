@@ -1,0 +1,119 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Ajibola
+{% endblock %}
+
+{% block content %}
+
+  {% load static%}
+  <section class="home" id="home">
+        <div class="home-content">
+            <h1>Hi, Its <span>Ajibola</span></h1>
+            <h3 class="text-animation"> I'm a <span></span></h3>
+            <p>The C.E.O of Ajjitech </p>
+            <p>Hi, I’m a computer professional with 5 years of experience in Computer Engineering, 
+                Web Development, Graphics Design.
+                I specialize in creating innovative solutions that
+                blend technology and user-centric design to solve real-world problems. 
+                my passion is turning ideas
+                into reality</p>
+            <div class="social-icon">
+                <a href="https://www.instagram.com/ajibolaasorire/?utm_source=qr&r=nametag"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="https://wa.me/2349021325331?text= Hi, I need your Service"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://x.com/JAsorire?t=sD3hH679_y2eLbQ6L1lHXg&s=09"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.tiktok.com/@ajjitech?_t=ZM-8waoAMlSKTI&_r=1"><i class='bx bxl-tiktok'></i></a>
+            </div>
+
+            <div class="btn-group">
+                <a href="#" class="btn">Hire</a>
+                <a href="#contact" class="btn"> Contact</a>
+
+            </div>
+
+
+        </div>
+        <div class="home-image">
+            <img src="{% static 'profileImg.png' %}" alt="">
+        </div>
+    </section>
+    <section class="testimonial" id="testimonial">
+        <div class="testimonial-box">
+            <h2 class="heading">Testimonials</h2>
+
+            <div class="wrapper">
+                <div class="testimonial-items">
+                    <img src="{% static '007.jpg' %}">
+                    <h2>DAUD RIDWAN</h2>
+                    <div class="rating">
+                        <i class='bx bxs-star' id="star"></i>
+                        <i class='bx bxs-star' id="star"></i>
+                        <i class='bx bxs-star' id="star"></i>
+                        <i class='bx bxs-star' id="star"></i>
+                        <i class='bx bxs-star' id="star"></i>
+                    </div>
+                    <p>
+                        Working with Ajibola was a breeze! He designed a stunning logo that perfectly captures our brand's identity.
+                    </p>
+                </div>
+
+                <div class="testimonial-items">
+                    <img src="{% static '009.jpg' %}">
+                    <h2>ABSULRAZAQ ABIOLA</h2>
+                    <div class="rating">
+                        <i class='bx bxs-star' id="star"></i>
+                        <i class='bx bxs-star' id="star"></i>
+                        <i class='bx bxs-star' id="star"></i>
+                        <i class='bx bxs-star' id="star"></i>
+                        <i class='bx bxs-star' id="star"></i>
+                    </div>
+                    <p>
+                        The website Ajibola built for us is sleek, modern, and easy to navigate. It's exceeded our expectations!
+                    </p>
+                </div>
+
+                <div class="testimonial-items">
+                    <img src="{% static '008.jpg'%}">
+                    <h2>ABDULRAZAQ OLALEYE</h2>
+                    <div class="rating">
+                        <i class='bx bxs-star' id="star"></i>
+                        <i class='bx bxs-star' id="star"></i>
+                        <i class='bx bxs-star' id="star"></i>
+                        <i class='bx bxs-star' id="star"></i>
+                        <i class='bx bxs-star' id="star"></i>
+                    </div>
+                    <p>
+                        Ajibola's creativity and attention to detail are unmatched. Our new branding and website have received countless compliments!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact"> 
+        <h2 class="heading">Contact <span>Me</span></h2>
+
+        <form action=""  method="POST">
+            {% csrf_token %}
+            {% comment %} {{ form.as_p}}    {% endcomment %}
+        
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="text" id="name" placeholder="Full Name" name="full-name" required>
+                    <input type="email" id="email" placeholder="Email"  name="email"required>
+
+                </div>
+                <div class="input-box">
+                    <input type="text" id="Subject" placeholder="Subject" name="subject" required>
+                </div>
+            </div>
+            <div class="input-group-2">
+                <textarea id="message" cols="30" rows="10" placeholder="Your Message" name="message" required></textarea>
+                <input type="submit" value="Send Mail" class="btn">
+                <a href="https://wa.me/2349021325331?text= Hi, I need your Service" class="btn"> WhatSapp</a>
+            </div> 
+            
+        </form>
+        
+    </section>
+{% endblock  %}

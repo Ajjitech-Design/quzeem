@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block title%}
+  Recent Jobs
+{% endblock %}
+
+
+{% block content%}
+  <section class="job" id="testimonial">
+    <h2 class="heading">Jobs</h2>
+        <div class="job-box">
+            
+            
+            <div class="wrapper">
+              {% for x in pics %}
+                <div class="job-items">
+                      <img src="{{x.image.url}}" class="img-fluid" alt="Responsive Image">
+                      <h3 class="lead">{{x.caption}}</h3>
+                      <a href="https://wa.me/2349021325331?text= Hi, I need your Service" class="btn"> WhatSapp</a>
+                  
+                </div>
+              {% endfor %}
+            </div>
+            
+        </div>
+    </section>
+{% endblock %}
+</html>
