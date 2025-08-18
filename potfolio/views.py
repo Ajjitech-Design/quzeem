@@ -1,8 +1,12 @@
 # from potfolio.forms import ContactForm
 from django.shortcuts import render, redirect 
 from django.core.mail import send_mail
+from JOBS.models import Image, web
 
 def ajibola(request):
+    pics = Image.objects.order_by("-date")[:4]
+    webs = web.objects.order_by("-date")[:4]
+    
     if request.method == 'POST':
         name = request.POST.get('full-name')
         email = request.POST.get('email')
@@ -33,7 +37,9 @@ def ajibola(request):
     #         return redirect ("ajibola")
     # else:
     #     form = ContactForm()
-    return render(request, "portfolio.html",{})
+    return render(request, "portfolio.html",{"pics":pics, "webs":webs})
 
 def service(request):
     return render(request, "service.html")
+
+

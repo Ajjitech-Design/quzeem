@@ -11,7 +11,7 @@
         <div class="home-content">
             <h1>Hi, Its <span>Ajibola</span></h1>
             <h3 class="text-animation"> I'm a <span></span></h3>
-            <p>The C.E.O of Ajjitech </p>
+            {% comment %} <p>The C.E.O of Ajjitech </p> {% endcomment %}
             <p>Hi, I’m a computer professional with 5 years of experience in Computer Engineering, 
                 Web Development, Graphics Design.
                 I specialize in creating innovative solutions that
@@ -19,14 +19,14 @@
                 my passion is turning ideas
                 into reality</p>
             <div class="social-icon">
-                <a href="https://www.instagram.com/ajibolaasorire/?utm_source=qr&r=nametag"><i class='bx bxl-instagram-alt'></i></a>
-                <a href="https://wa.me/2349021325331?text= Hi, I need your Service"><i class='bx bxl-whatsapp'></i></a>
-                <a href="https://x.com/JAsorire?t=sD3hH679_y2eLbQ6L1lHXg&s=09"><i class='bx bxl-twitter'></i></a>
-                <a href="https://www.tiktok.com/@ajjitech?_t=ZM-8waoAMlSKTI&_r=1"><i class='bx bxl-tiktok'></i></a>
+                <a href="https://www.instagram.com/ajji.tech?igsh=Y21lNWJoZzByZWJ0" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="https://wa.me/2349021325331?text= Hi, I need your Service" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://x.com/JAsorire?t=sD3hH679_y2eLbQ6L1lHXg&s=09" target="_blank"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.tiktok.com/@ajjitech?_t=ZM-8waoAMlSKTI&_r=1" target="_blank"><i class='bx bxl-tiktok'></i></a>
             </div>
 
             <div class="btn-group">
-                <a href="#" class="btn">Hire</a>
+                <a href="{% static 'Quzeem.pdf' %}" class="btn" download>Download CV</a>
                 <a href="#contact" class="btn"> Contact</a>
 
             </div>
@@ -34,9 +34,69 @@
 
         </div>
         <div class="home-image">
-            <img src="{% static 'profileImg.png' %}" alt="">
+            <img src="{% static 'profile.jpg' %}" alt="">
         </div>
     </section>
+   
+    
+    
+
+    <section class="contact" id="contact"> 
+        <h2 class="heading">Contact <span>Me</span></h2>
+
+        <form action="" id="myForm"  method="POST">
+            {% csrf_token %}
+
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="text" id="name" placeholder="Full Name" name="full-name" required>
+                    <input type="email" id="email" placeholder="Email"  name="email"required>
+
+                </div>
+                <div class="input-box">
+                    <input type="text" id="Subject" placeholder="Subject" name="subject" required>
+                </div>
+            </div>
+            <div class="input-group-2">
+                <textarea id="message" cols="30" rows="10" placeholder="Your Message" name="message" required></textarea>
+                <input type="submit" value="Send Mail" class="btn">
+                <a href="https://wa.me/2349021325331?text= Hi, I need your Service" class="btn" target="_blank"> WhatSapp</a>
+                
+            </div> 
+            
+        </form>
+        
+    </section>
+    <section class="rjob" id="recent">
+        <h2 class="heading">Graphics</h2>
+        <div class="rjob-box">
+            <div class="wrapper">
+              {% for x in pics|slice:":4" %}
+                <div class="rjob-items">
+                      <a href="{{x.image.url}}"><img src="{{x.image.url}}" class="img-fluid" alt="Responsive Image"></a>
+                      <h3 class="lead">{{x.caption}}</h3>                       
+                </div>
+              {% endfor %}                 
+            </div>
+            <a href="{% url 'JOBS:jobs'%}" class="btn"> See all.........</a> 
+        </div>
+        <h2 class="heading">Websites</h2>
+        <div class="job-box">
+            <div class="wrapper">
+              {% for x in webs|slice:":3" %}
+                <div class="job-items">
+                      <a href="{{x.image.url}}"><img src="{{x.image.url}}" class="img-fluid" alt="Responsive Image"></a>
+                      <h3 class="lead">{{x.caption}}</h3>
+                      <div class="social-icon">
+                        {% comment %} <a href="{{x.site}}"class="visit">Visit</a> {% endcomment %}
+                      </div>
+                </div>
+              {% endfor %}
+            </div>
+            <a href="{% url 'JOBS:projects'%}" class="btn"> See all.........</a> 
+        </div>
+    </section>
+
     <section class="testimonial" id="testimonial">
         <div class="testimonial-box">
             <h2 class="heading">Testimonials</h2>
@@ -89,31 +149,5 @@
             </div>
         </div>
     </section>
-
-    <section class="contact" id="contact"> 
-        <h2 class="heading">Contact <span>Me</span></h2>
-
-        <form action=""  method="POST">
-            {% csrf_token %}
-            {% comment %} {{ form.as_p}}    {% endcomment %}
-        
-            <div class="input-group">
-                <div class="input-box">
-                    <input type="text" id="name" placeholder="Full Name" name="full-name" required>
-                    <input type="email" id="email" placeholder="Email"  name="email"required>
-
-                </div>
-                <div class="input-box">
-                    <input type="text" id="Subject" placeholder="Subject" name="subject" required>
-                </div>
-            </div>
-            <div class="input-group-2">
-                <textarea id="message" cols="30" rows="10" placeholder="Your Message" name="message" required></textarea>
-                <input type="submit" value="Send Mail" class="btn">
-                <a href="https://wa.me/2349021325331?text= Hi, I need your Service" class="btn"> WhatSapp</a>
-            </div> 
-            
-        </form>
-        
-    </section>
+    
 {% endblock  %}

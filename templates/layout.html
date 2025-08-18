@@ -11,6 +11,7 @@
     </title>
     <link rel="stylesheet" href="{% static 'potfolio.css' %}">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
     {% comment %} <script type="text/javascript"
         src="{% static 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js' %}">
     </script> {% endcomment %}
@@ -23,6 +24,16 @@
     </script>
 </head>
 <body>
+    <!-- Loader HTML -->
+    <!-- Beautiful Bouncing Dots Loader -->
+    <div id="loader-wrapper">
+      <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
 
   <header class="header">
         <a href="/" class="logo"> Asorire <span>Quzeem</span></a>
@@ -30,10 +41,11 @@
         <i class='bx bx-menu' id="menu-icon"></i>
         <nav class="navbar">
             <a href="/#home" class="active"> Home</a>
-            <!-- <a href="#education"> Education</a> --> 
-            <a href="/#testimonial">Testimonials</a>
+            <a href="/#recent">Recent Design</a>  
+            <a href="/#testimonial">Testimonials</a>           
             <a href="/#contact"> Contact </a>
-            <a href="/service">Service</a>
+            <a href="/service" class="btn">Service</a>
+            
             
         </nav>
   </header>
@@ -44,10 +56,10 @@
 
    <footer class="footer">
         <div class="social">
-            <a href="https://www.instagram.com/ajibolaasorire/?utm_source=qr&r=nametag"><i class='bx bxl-instagram-alt'></i></a>
-            <a href="https://wa.me/2349021325331?text= Hi, I need your Service"><i class='bx bxl-whatsapp'></i></a>
-            <a href="https://x.com/JAsorire?t=sD3hH679_y2eLbQ6L1lHXg&s=09"><i class='bx bxl-twitter'></i></a>
-            <a href="https://www.tiktok.com/@ajjitech?_t=ZM-8waoAMlSKTI&_r=1"><i class='bx bxl-tiktok'></i></a>
+            <a href="https://www.instagram.com/ajji.tech?igsh=Y21lNWJoZzByZWJ0" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+            <a href="https://wa.me/2349021325331?text= Hi, I need your Service" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+            <a href="https://x.com/JAsorire?t=sD3hH679_y2eLbQ6L1lHXg&s=09" target="_blank"><i class='bx bxl-twitter'></i></a>
+            <a href="https://www.tiktok.com/@ajjitech?_t=ZM-8waoAMlSKTI&_r=1" target="_blank"><i class='bx bxl-tiktok'></i></a>
         </div>
         <ul class="list">
 

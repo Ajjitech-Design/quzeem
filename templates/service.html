@@ -5,6 +5,7 @@
 {% endblock %}
 
 {%block content%}
+{% load static %}
     <section class="service" id="service">
         <h2 class="heading"> Services</h2>
 
@@ -18,7 +19,7 @@
                         
                     </p>
                     <div class="btn-group">
-                        <a href="{% url 'JOBS:jobs'%}" class="btn"> view my previouse designs</a>
+                        <a href="{% url 'JOBS:jobs'%}" class="btn"> view my designs</a>
                         <a href="/#contact" class="btn"> Contact</a>
                     </div>
                 </div>
@@ -33,11 +34,51 @@
                         --Expertise in HTML, CSS, JavaScript, and more
                     </p>
                     <div class="btn-group">
-                        <a href="{% url 'JOBS:jobs'%}" class="btn"> view my recent designs</a>
+                        <a href="{% url 'JOBS:projects'%}" class="btn"> view my Projects</a>
                         <a href="/#contact" class="btn"> Contact</a>
                     </div>   
             </div>
         </div>
+    </section>
+
+    <section class="education" id="education">
+        <h2 class="heading"> Experience </h2>
+
+        <div class="timeline-items">
+
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2020-2023</div>
+                <div class="timeline-content">
+                    <h3> SENIOR GRAPHICS DESIGNER, OLAMUMMY DIGITAL ENT.</h3>
+                    <p>
+                        - Designed visual identity for multiple clients, including logos, business cards, and brochures. <br>
+                        - Created engaging social media graphics and animations using Adobe Creative Suite. <br>
+                        - Developed and maintained brand style guides for consistency across all marketing materials.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2023-2025</div>
+                <div class="timeline-content">
+                    <h3>WEB DEVELOPER, SOLUTECH CITY.</h3>
+                    <p>
+                        - Developed responsive websites using HTML, CSS, and JavaScript. <br>
+                        - Collaborated with designers to implement visually appealing designs. <br>
+                        - Improved website loading speed by 30% through optimization techniques.
+
+                    </p>
+                </div>
+
+            </div>
+            
+
+        </div>
+        
     </section>
 
 {% endblock %}

@@ -3,6 +3,8 @@ from . import views
 
 
 app_name= "JOBS"
+
 urlpatterns = [
-    path ('', views.jobs_view, name="jobs")
+    path ('', views.jobs_view, name="jobs"),
+    path ('sites/', views.WebJob, name="projects"),
 ]

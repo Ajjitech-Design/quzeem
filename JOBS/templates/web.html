@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% block title %}
+    PROJECTS
+{% endblock %}
+
+{% block content%}
+    <section class="job" id="testimonial">
+    <h2 class="heading">Projects</h2>
+        <div class="job-box">
+            
+            
+            <div class="wrapper">
+              {% for x in webs %}
+                <div class="job-items">
+                      <a href="{{x.image.url}}"><img src="{{x.image.url}}" class="img-fluid" alt="Responsive Image"></a>
+                      <h3 class="lead">{{x.caption}}</h3>
+                      <div class="social-icon">
+                        {% comment %} <a href="{{x.site}}" class="visit" target="_blank">Visit</a> {% endcomment %}
+                        <a href="https://wa.me/2349021325331?text= Hi, I need website" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+                        <a href="/#contact"><i class='bxr  bx-mail-open'></i> </i></a>
+                      </div>
+                      
+                </div>
+              {% endfor %}
+            </div>
+            
+        </div>
+    </section>
+{% endblock %}

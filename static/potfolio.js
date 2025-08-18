@@ -26,20 +26,29 @@ menuicon.onclick = () => {
     navbar.classList.toggle('active')
 }
 
+  window.addEventListener('load', function () {
+    const loader = document.getElementById('loader-wrapper');
+    loader.style.opacity = '0';
+    setTimeout(() => {
+      loader.style.display = 'none';
+    }, 500); // wait for fade out
+  });
+
+
 // EMAIL SENDING SECTION
-function emailSend(){
-    Email.send({
-        Host : "smtp.gmail.com",
-        Username : "anabelrose229@gmail.com",
-        Password : "A14391F382FA2C59DEBE8CD9D2CAB8F4E827",
-        To : 'asorirejibola52@gmail.com',
-        From : "anabelrose229@gmail.com",
-        Subject : "New Content Form Enquiry",
-        Body : "And this is the body"
-    }).then(
-      message => alert('THANKS WE WILL GET BACK SHORTLY')
-    );
-}
+// function emailSend(){
+//     Email.send({
+//         Host : "smtp.gmail.com",
+//         Username : "anabelrose229@gmail.com",
+//         Password : "A14391F382FA2C59DEBE8CD9D2CAB8F4E827",
+//         To : 'asorirejibola52@gmail.com',
+//         From : "anabelrose229@gmail.com",
+//         Subject : "New Content Form Enquiry",
+//         Body : "And this is the body"
+//     }).then(
+//       message => alert('THANKS WE WILL GET BACK SHORTLY')
+//     );
+// }
 
 // function sendMail(){
 //     let parms = {
@@ -53,8 +62,9 @@ function emailSend(){
 //     emailjs.send('service_hbca5z8','template_744jcmd',parms).then(alert('Email Sent!!'))
 // }
 
-// BACK TO TOP FUNCTIONING SECTION 
 
+
+// BACK TO TOP FUNCTIONING SECTION 
 var btt=document.getElementById('back-to-top'),
     body=document.body,
     docElem=document.documentElement,
@@ -71,3 +81,6 @@ var btt=document.getElementById('back-to-top'),
         scrollpas=body.scrollTop || docElem.scrollTop;
         btt.className=(scrollpas > offset)?'visible':"";
     });
+
+
+    

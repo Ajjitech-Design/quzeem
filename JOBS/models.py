@@ -8,3 +8,12 @@ class Image(models.Model):
 
     def __str__(self):
         return self.caption
+
+class web(models.Model):
+    image  = models.ImageField(upload_to="img/%y")
+    site = models.URLField( max_length=300)
+    date = models.DateField(auto_now_add=True)
+    caption = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.caption
