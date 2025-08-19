@@ -1,2 +1,2 @@
 pip install -r requirements.txt
-python3.9 manage.py collectstatics
+python3.12.5 manage.py collectstatics
