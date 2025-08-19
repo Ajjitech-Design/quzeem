@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
+import dj_database_url
 from pathlib import Path
 import os
 # import django_heroku
@@ -28,7 +29,7 @@ SECRET_KEY = 'django-insecure-)!3drx3(m(1p=u*p$&wo#u#ugwgmptm+y#q^)cap@ytdz(o@v%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.vercel.app','127.0.0.1','.now.sh']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -77,24 +78,27 @@ WSGI_APPLICATION = 'potfolio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'ZrZZdgPYnnBfdYqrJGiPNpMLTDQbXxWx',
-        'HOST': 'shortline.proxy.rlwy.net',
-        'PORT': '20593',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
 
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'railway',
+#         'USER': 'postgres',
+#         'PASSWORD': 'ZrZZdgPYnnBfdYqrJGiPNpMLTDQbXxWx',
+#         'HOST': 'shortline.proxy.rlwy.net',
+#         'PORT': '20593',
+#     }
+# }
+
+# postgresql://ajjitechpgpg_user:ahVV79XNnNDNJCHp7icCQhuNzQD30ieu@dpg-d2hnq5v5r7bs738dio90-a.oregon-postgres.render.com/ajjitechpgpg
 
 
 # Password validation
@@ -133,6 +137,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 STATICFILES_DIRS = (os.path.join(BASE_DIR,"static"),)
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR,"media/")
