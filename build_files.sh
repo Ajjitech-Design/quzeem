@@ -1,2 +1,5 @@
+set -o errexit  
+
 pip install -r requirements.txt
-python3.13.5 manage.py collectstatics
+python manage.py collectstatic --no-input
+python manage.py migrate
