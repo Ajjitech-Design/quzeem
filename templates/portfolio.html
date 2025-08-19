@@ -7,6 +7,18 @@
 {% block content %}
 
   {% load static%}
+
+  <!-- Loader HTML -->
+    <!-- Beautiful Bouncing Dots Loader -->
+    <div id="loader-wrapper">
+      <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+
   <section class="home" id="home">
         <div class="home-content">
             <h1>Hi, Its <span>Ajibola</span></h1>
@@ -71,7 +83,7 @@
         <h2 class="heading">Graphics</h2>
         <div class="rjob-box">
             <div class="wrapper">
-              {% for x in pics|slice:":4" %}
+              {% for x in pics|slice:":3" %}
                 <div class="rjob-items">
                       <a href="{{x.image.url}}"><img src="{{x.image.url}}" class="img-fluid" alt="Responsive Image"></a>
                       <h3 class="lead">{{x.caption}}</h3>                       
