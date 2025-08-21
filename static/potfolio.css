@@ -102,7 +102,6 @@ body{
     font-size: 2rem;
     color: var(--text-color);
     font-weight: 800;
-    cursor: pointer;
     transition: 0.3s ease;
 }
 .logo:hover{
@@ -251,7 +250,6 @@ span{
     letter-spacing: 0.1rem;
     font-weight: 600;
     transition: 0.3s ease-in-out;
-    cursor: pointer;
     animation: fadeInUp 2s ease;
 }
 .btn:hover{
@@ -287,7 +285,6 @@ span{
     letter-spacing: 0.1rem;
     font-weight: 600;
     transition: 0.3s ease-in-out;
-    cursor: pointer;
     color: white;
 }
 .text-animation{
@@ -404,7 +401,6 @@ span{
     border-radius: 2rem;
     margin: 0 2rem;
     padding: 10px 20px;
-    cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -490,7 +486,6 @@ span{
     padding: 30px 50px;
     border-radius: 4rem;
     box-shadow: 0 0 10px var(--main-color);
-    cursor: pointer;
     transition: 0.3s ease-in-out;
 }
 .timeline-content:hover{
@@ -539,7 +534,6 @@ span{
     height: 260px;
     border-radius: 3rem;
     border: 5px solid transparent;
-    cursor: pointer;
     transition: 0.4s ease-in-out;
     animation: fadeInUp 2s ease;
 }
@@ -610,7 +604,6 @@ span{
     border-radius: 2rem;
     margin: 0 2rem;
     padding: 30px 60px;
-    cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -742,7 +735,6 @@ span{
     text-decoration: none;
     display: inline-block;
     opacity: 0;
-    cursor: pointer;
     transition: 0.4s ease-in-out;
     font-size: 40px;
     border-radius: 20%;
@@ -789,7 +781,6 @@ span{
     border-radius: 2rem;
     margin: 0 2rem;
     padding: 10px 20px;
-    cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -974,7 +965,6 @@ span{
         letter-spacing: 0.1rem;
         font-weight: 400;
         transition: 0.3s ease-in-out;
-        cursor: pointer;
         margin-top: 30px;
     }
     .btn:hover{
